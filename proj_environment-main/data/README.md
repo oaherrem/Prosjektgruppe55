@@ -15,6 +15,4 @@ Info angående innsamlet data
 
 METAR inneholder informasjon som vindhastighet, vindkast (gust), vindretning, temperatur, duggpunkt, sikt, skydekke, nedbør og trykk over havnivå (QNH) oppført i hektopascal (hPa).
 
-TAF inneholder informasjon som fremtidig vindhastighet, vindkast, vindretning, sikt, skyforhold og værfenomener, kan også inneholde sannsynlighet for at værfenomener oppstår.
-
 International Civil Aviation Organization-koder (ICAO-koder) er en internasjonal standard og navngivning av flyplasser og landingsplasser likt den mer kjente standarden IATA-koder som OSL for Oslo Lufthavn og TRD for Trondheim Lufthavn. Det som gjør ICAO-koder til en mer presis navngivning av flyplasser og landingsplasser er at den er unik og kan ikke forveksles med andre flyplasser eller landingsplasser, i motsetning til IATA-koder som ikke er unike og kan brukes for flere plasser.

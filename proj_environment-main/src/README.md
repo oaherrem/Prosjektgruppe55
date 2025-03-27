@@ -10,6 +10,12 @@ gjør en mappe til en Python-pakke, som gjør det mulig å finne andre pyton kod
 
 ---
 
+dataFrame_metar.py
+
+Plasserer informasjon i riktig kolonne ved bruk av ulike list comprehensions. Den bruker også en for loop med flere if setninger for å kunne hente riktig data til riktig kolonne. Dette gjør oppgave 3 mulig slik at vi får informasjonen i en data frame.
+
+---
+
 metar_reader
 
 leser METAR-data og gjør videre analyse av data mulig.
@@ -21,14 +27,3 @@ metar_writer
 skriver METAR-data basert på gitte perimetre gitt av brukeren.
 
 ---
-
-taf_reader 
-
-leser TAF-data og gjør videre analyse av data mulig.
-
----
-
-taf_writer
-
-skriver TAF-data basert på gitte perimetre gitt av brukeren.
-

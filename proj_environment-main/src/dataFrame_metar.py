@@ -32,49 +32,49 @@ def metar_df(interresting_variables,data_m):
                     if "V" in part and len(part)==7:
                         row_data["Variable wind"] = part
                         break
-                else: row_data["Variable wind"] = np.nan
+                    else: row_data["Variable wind"] = np.nan
 
             if "Cloud 1" in interresting_variables:
                 for part in partsList:
                     if part == "CAVOK":
                         row_data["Cloud 1"] = part
                         break
-                else: row_data["Cloud 1"] =np.nan
+                    else: row_data["Cloud 1"] =np.nan
 
             if "Cloud 2" in interresting_variables:
                 for part in partsList:
                     if "FEW" in part and len(part) > 4:
                         row_data["Cloud 2"] = part
                         break
-                else: row_data["Cloud 2"] = np.nan
+                    else: row_data["Cloud 2"] = np.nan
 
             if "Cloud 3" in interresting_variables:
                 for part in partsList:
                     if "SCT" in part and len(part)> 4:
                         row_data["Cloud 3"] = part
                         break
-                else: row_data["Cloud 3"] =np.nan
+                    else: row_data["Cloud 3"] =np.nan
 
             if "Cloud 4" in interresting_variables:
                 for part in partsList:
                     if "BKN" in part and len(part)> 4:
                         row_data["Cloud 4"] = part
                         break
-                else: row_data["Cloud 4"] =np.nan
+                    else: row_data["Cloud 4"] =np.nan
 
             if "Cloud 5" in interresting_variables:
                 for part in partsList:
                     if "OVC" in part:
                         row_data["Cloud 5"] = part
                         break
-                else: row_data["Cloud 5"] =np.nan
+                    else: row_data["Cloud 5"] =np.nan
 
             if "Temp/dewpoint" in interresting_variables:
                 for part in partsList:
                     if "/" in part and len(part)> 3:
                         row_data["Temp/dewpoint"] = part
                         break
-                else: row_data["Temp/dewpoint"] = np.nan
+                    else: row_data["Temp/dewpoint"] = np.nan
 
             if "QNH/pressure" in interresting_variables:
                 for part in partsList:

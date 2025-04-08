@@ -1,5 +1,6 @@
 
 import pandas as pd
+import numpy as np
 
 def metar_df(interesting_variables,data_m):
     df = pd.DataFrame(columns=interesting_variables)
@@ -29,6 +30,13 @@ def metar_df(interesting_variables,data_m):
                     row_data["Wind_speed"] = int(wind_speed_str)
                 except ValueError:
                     row_data["Wind_speed"] = 0  
+
+            if len(parts)> 3 and "Gust_speed" in interesting_variables:
+                wind_speed_str = partsList[2][6:8]
+                try:
+                    row_data["Gust_speed"] = int(wind_speed_str)
+                except ValueError:
+                    row_data["Gust_speed"] = 0
 
             # Konverter row_data til en DataFrame og legg den til df ved hjelp av pd.concat
             row_df = pd.DataFrame([row_data])

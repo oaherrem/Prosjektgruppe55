@@ -6,7 +6,7 @@ import pandas as pd
 # Adjust the path to the src directory
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
 
-from dataFrame_wind1 import metar_df
+from dataFrame_wind import metar_df
 
 class TestMetarDataFrame(unittest.TestCase):
     def test_metar_df(self):
@@ -33,13 +33,13 @@ class TestMetarDataFrame(unittest.TestCase):
         self.assertFalse(dataframe["Airport"].isna().any(), "Airport-kolonnen inneholder NaN!")
 
         # Sjekk at DataFrame har riktig antall rader
-        self.assertEqual(len(data_m["metar"]), 4)
+        self.assertEqual(len(data_m["metar"]), len(dataframe),4)
 
         # Sjekk at verdiene i DataFrame er riktige
-        self.assertEqual(dataframe["Airport"].iloc[0],"ENOL")
-        self.assertEqual(dataframe.iloc[0]["Date/time"], "010020Z")
-        #self.assertEqual(dataframe.iloc[0]["Wind_direction"], "12031KT")
-        #self.assertEqual(dataframe.iloc[0]["QNH/pressure"], "Q1007=")
+        self.assertEqual(dataframe["Airport"].iloc[0],"ENOL") # kjører fra første linje i datasettet. 
+        self.assertEqual(dataframe["Date/time"].iloc[1],"010050Z") # kjører fra andre linje i datasettet. 
+        self.assertEqual(dataframe["Wind_direction"].iloc[2],120) # tredje linje i datasettet. 
+        self.assertEqual(dataframe["QNH"].iloc[3],"1009") # fjerde linje i datasettet.
 
 if __name__ == '__main__':
     unittest.main()

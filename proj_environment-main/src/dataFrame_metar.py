@@ -21,8 +21,29 @@ def metar_df(interesting_variables,data_m):
             if len(parts)> 2 and "Date/time" in interesting_variables:
                 row_data["Date/time"] = partsList[1]
  
-            if len(parts)> 3 and "Wind/direction" in interesting_variables:
-                row_data["Wind/direction"] = partsList[2]
+            #if len(parts)> 3 and "Wind/direction" in interesting_variables:
+                #row_data["Wind/direction"] = partsList[2]
+
+            if len(parts)> 3 and "Wind_direction" in interesting_variables:
+                wind_dir_str = partsList[2][:3]
+                try:
+                    row_data["Wind_direction"] = int(wind_dir_str)
+                except ValueError:
+                    row_data["Wind_direction"] = 0
+
+            if len(parts)> 3 and "Wind_speed" in interesting_variables:
+                wind_speed_str = partsList[2][3:5]
+                try:
+                    row_data["Wind_speed"] = int(wind_speed_str)
+                except ValueError:
+                    row_data["Wind_speed"] = 0  
+
+            if len(parts)> 3 and "Gust_speed" in interesting_variables:
+                wind_speed_str = partsList[2][6:8]
+                try:
+                    row_data["Gust_speed"] = int(wind_speed_str)
+                except ValueError:
+                    row_data["Gust_speed"] = np.nan
  
             if "Variable wind" in interesting_variables:
                 for part in partsList:
@@ -77,12 +98,12 @@ def metar_df(interesting_variables,data_m):
                         break
                     else: row_data["Temp/dewpoint"] = np.nan
            
-            if "QNH/pressure" in interesting_variables:
+            if "QNH" in interesting_variables:
                 for part in partsList:
                     if "Q" in part and len(part)> 3:
-                        row_data["QNH/pressure"] = part
+                        row_data["QNH"] = part[1:5]
                         break
-                    else: row_data["QNH/pressure"] = np.nan
+                    else: row_data["QNH"] = np.nan
            
         # Konverter row_data til en DataFrame og legg den til df ved hjelp av pd.concat
             row_df = pd.DataFrame([row_data])

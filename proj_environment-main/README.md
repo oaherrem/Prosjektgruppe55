@@ -1,20 +1,81 @@
-# Project
+# Mappeinndeling og innhold av besvarelse
 
-The course has portfolio assessment which forms the basis for the grade in the subject. Portfolio assessment is based on the work you do in your project. The project should be solved in groups, and it is sufficient for one person in the group to submit the answer in Blackboard. When you have solved all the tasks, upload the entire answer as one zip file in BB. The zip file should contain the entire project directory, including all source code, .git directory, etc. It is important that you include the .git directory (an "invisible" directory in the root directory of your project) because it contains your version history. You will receive written feedback on what you have submitted in BB, and you can make improvements to the code right up until the final portfolio submission.
+## Data
+Mappe for lagring av innsamlet data. Inneholder to undermapper, en for csv filer og en for json filer. 
+
+[Data](/proj_environment-main/data/README.md)
+
+## Docs
+Innholder dokumentasjon og utfyllende besvarelser. 
+- Oppgavebeskrivelsene av del 1 + 2 samt generell del
+- Utfyllende svar på oppgavene og vurderingskriteriene 
+
+[Docs\tasks](/proj_environment-main/docs/tasks/del_1.md)
+
+## Notebooks
+
+Her ligger kodene for hver oppgave. Vi importerer lagrede data filer i tillegg til våre hovedfunksjoner. 
+
+[Notebooks](/proj_environment-main/notebooks/README.md)
+## Resources
+ 
+ - Her ligger bilder/ e.l som vi har brukt i prosjektet. 
+
+[Resources](/proj_environment-main/resources/README.md)
+
+## Src
+
+I denne mappen ligger koder som kan benyttes flere ganger. Dette gjør kodene mer brukervennlige å hente opp flere ganger uten å måtte kopiere koden direkte inn i hver fil. 
+
+[Src](/proj_environment-main/src/README.md)
+
+## .env
+. env er lagringsplass av linker, API-nøkler og koder.
+
+[.env](/proj_environment-main/.env)
 
 
-The project is divided into the following parts:
 
-1. General Part: Background information about the project and tasks that are common to all parts.
-2. Portfolio Part 1: Focuses on data collection and preparation.
-3. Portfolio Part 2: Focuses on data analysis and visualization.
 
-Final project has to be delivered in Inspera for assessment. The grading scale is A-F.
+## .requirements.txt
 
-```{Note}
-We do not recommend starting work on the project before week 6, as we might make changes to it. Until then, you can prepare yourself and focus on learning topics relevant to increasing your competency to deliver the project successfully.
-```
+Lister opp hvilke Python-pakker som prosjektet trenger for å kjøre.
+[.requirements.txt](/requirements.txt)
 
-```{important}
-To access the project template, click <a href="https://jupyterhub.apps.stack.it.ntnu.no/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgit.ntnu.no%2FTDT4114%2Fproj_environment.git&#38;urlpath=lab%2Ftree%2Fproj_environment.git%2FREADME.md&#38;branch=main">here</a> to copy source files to Jupyter Hub (NTNU). And/Or clone/download from the GitHub repository: <a href="https://git.ntnu.no/TDT4114/proj_environment">https://git.ntnu.no/TDT4114/proj_environment</a>.
-```
+## .gitignore
+
+Ignorerer deler i forbindelse emg git hub. 
+
+[.gitignore](/.gitignore)
+
+
+# Utgangspunktet for oppgave
+
+Forklaring**
+## Bodø flyplass
+Ny flystripe for Bodø Lufthavn
+https://www.nrk.no/nordland/forste-spadetak-pa-bodo-lufthavn-og-prosjektet-ny-by-ny-flyplass-1.16344890
+
+## Ørland flyplass 
+Vi ønsket å undersøke om flystripen på Ørland er optimal, da de nettopp har holdt hoverullebanen stengt grunnet arbeid og renovering i over 1 år? 
+
+Du kan lese mer her: 
+https://www.forsvarsbygg.no/no/nyheter/ny-hovedrullebane-pa-orland-flystasjon-er-operativ/
+
+## Dagens rullebaneretninger
+
+ENBO: RWY 07/25 /// 70 og 250 grader
+
+ENOL: RWY 15/33 /// 150 og 330 grader
+
+
+## Prosjektets premisser
+
+Fly ønsker å ta av i motvind og lande i motvind. Det er tryggere, mer drivstoffbesparende og sliter mindre på bremser og dekk. Ergo tryggere, lavere kostnader og mer miljøvennlig.
+
+I dette prosjektet ønsker vi å finne ut hva som er optimal retning på flystripen, basert på historisk data for vindretning? Både for Ørlandet hvor de har gjort oppgraderinger uten å flytte retningen på rullebanen og i Bodø hvor det er vedtatt at den skal flyttes.
+
+
+Hvorfor motvind er bra for landing og avgang kan du lese her:  
+https://skybrary.aero/articles/headwind
+https://simpleflying.com/why-aircraft-take-off-land-into-wind/

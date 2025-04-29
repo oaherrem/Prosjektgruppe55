@@ -1,17 +1,27 @@
 # Mappe del 2
-Forklaring mappe del 2: 
+Forklaring overordnet* mappe del 2: 
 
 ## Oppgave 4
+I oppgave 4 starter vi med å definere en variabel "airport" som vi skal bruke for å analysere data for den valgte flyplassen. På denne måten trenger vi kun å bytte ut f.eks. ENOL med ENBO for å hente ut verdier fra en annen flyplass. 
 
-1. Vi har brukt Pandas innebygde koder for å regne ut gjennomsnitt, median og standardavvik for dataen vi har valgt å fokusere på. Da vi har valgt å fokusere på vind-retning og hastighet er disse verdiene viktig statistiske mål fordi det forteller oss om variasjonene i målingene. 
+1. Vi har brukt Numpy og Pandas innebygde koder for å regne ut gjennomsnitt, median og standardavvik for data som vi henter du fra datasettet vårt. Da vi har valgt å fokusere på vind-retning og hastighet er disse verdiene viktig statistiske mål i denne analysen, fordi dette forteller oss senere hvor mye målingene varierer. 
 
-2. Ved å bruke gjennomsnittlig måling av vind og vindkast, får vi et mer realistisk bilde på hvordan været faktisk er. Da vi er interessert i hvor ofte vinden er over 35 8kt, kan vi bruke den innebygde funksjonalitet max() til å si noe om hvor mye vinden begrenser aktivtet ved en flyplass. Den andre variabelen vi skal se på er trykk og hvordan den endrer seg i fht vinden. 
+2. 
+Vi har valgt å gjennomføre en enkel statistisk analyse ved å ta gjennomsnittet av vind retning mot tre andre variabler: vindhastighet, vindkast og trykk. Vi gjør dette ved den innebygde pandas-funksjonen groupby().
+Vi har dessuten valgt å gjennomføre tilsvarende analyse med variabelen trykk, mot tre andre variabler: vindretning, vindhastighet og vindkast. Dette er noe vi ser nærmere på i vår analyse i oppgave 5 og 6. 
 
-3. ved eventuelle skjevheter eller der vi vet vi ikke nødvendigvis får data hver gang, jobber vi kritisk med resultatene vi får. Da vi kjenner til denne måten dataen fungerer, har vi også en tanke på hvilke resultater vi forventer. 
+En annen analyse vi er interessert i er hvor mange tilfeller av sidevind som oppstår på en flyplass over en periode. Grunnen til dette er fordi det påvirker flyplassen sin operasjonelle status. Vi har valgt å lage en dynamisk funskjon "is_crosswind", som sjekker alle vindretningene som ligger innenfor vårt definerte kritiske området, samt vindhastighet over 35 knop. 
 
-4. Vi planlegger å bruke visualiseringsverktøyer windrose som en del av analysen av vindretning og hastighet, i tillegg til vindkast ved en flyplass. 
 
-- søylediagram 
+3. Ved eventuelle skjevheter eller der vi vet vi ikke nødvendigvis får data hver gang, jobber vi kritisk med resultatene vi får. Da vi kjenner til måten dataen fungerer på, har vi også en tanke på hvilke resultater vi forventer. Ved hjelp av bibliotekte missingno og dens innbygde funksjonen msno.matrix kan vi enkelt visualisere manglende verdier i datasettet vårt. Vi vet at metar-data alltid gir verdier som vindretning, vindhastighet og trykk. Det som kan variere er vindkast, som vi planlegger å sjekke. For å sjekke at programmet vårt klarer å håndtere manglende verdier fra flere variabler, vil vi med vilje slette noen datapunkter. 
+
+4. I vår analyse planlegger vi å bruke ulike visualiseringsverktøyer for å underbygge analysen vår av ulike variabler. 
+Forskjellige visualiseringer som vi planlegger å lage er scatterplott i 2D, vindrose, linjediagram og korrelasjon av ulike variabler. 
+Bibliotek vi bruker:
+- matplotlib.pyplt for å lage scatter plot og vindrose som skal sammenlikne vindretning opp mot vindhastighet og vindkast. Dessuten bruker vi dette til å vise grafene og diagrammene. 
+- seaborn bruker vi for å lage linjediagram av vindretning
+- Widgets planlegger vi å bruke for å gjøre*
+
 
 
 

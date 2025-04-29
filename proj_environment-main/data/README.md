@@ -1,17 +1,15 @@
-Describes the data directory and datasets
+# Data
+Innholdet i denne mappen består av nedlastet data gjennom en API fra meterologisk institutt. VI har valgt å dele mappen inn i to delmapper: en for json-filer og en for csv-filer. På denne måten holder vi denne mappen ryddig, i tillegg til at det er enkelt å jobbe med data-filene underveis. 
 
----
+## json
 
-Innhold av data
+Json filene innholder rådata fra API met, med metar data fra et år. I oppgave 2 blir data for en flyplass, i vårt tilfelle Ørland og Bodø, fra API.met lagret som json filer. Vi benytter [base_url](../.env) og funksjonen [metar_writer](../src/metar_writer.py) for å hente metar dataen. 
 
-I denne mappen lagres data som blir lagret fra notebooks/oppgave_2
 
-Dataen blir lagret i JSON-format for videre analyse.
-Vi har valgt JSON-format da denne jobber raskt og kan behandle store mengder data.
+## csv
+Dataen i disse filene er renset data fra json filene. Dataen i csv filene blir lagret gjennom [oppgave 3 - databehandling](../notebooks/Oppgave_3.ipynb). Her har vi laget en funskjon [dataframe_metar](../src/dataFrame_metar.py) som iterer over alle datapunktene. Deretter lager vi en dataframe som består av utvalgte variabler som vi bruker videre i analysen vår. 
 
-----
-
-Info angående innsamlet data
+## Generell info om innsamlet data.
 
 METAR inneholder informasjon som vindhastighet, vindkast (gust), vindretning, temperatur, duggpunkt, sikt, skydekke, nedbør og trykk over havnivå (QNH) oppført i hektopascal (hPa).
 

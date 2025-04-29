@@ -1,9 +1,9 @@
 import numpy as np
 import pandas as pd
- 
+import re
  
 # Eksempel på kolonnenavn
-#column_names = ["Airport", "Date/time", "Wind/direction", "Variable wind", "Cloud 1", "Cloud 2", "Cloud 3", "Cloud 4", "Cloud 5", "Temp/dewpoint", "QNH/pressure"]
+#column_names = ["Airport", "Date/time", "Wind_speed","Wind_direction","Gust_speed" ,"Variable wind", "Cloud 1", "Cloud 2", "Cloud 3", "Cloud 4", "Cloud 5", "Temperature", "Dewpoint", "QNH"]
  
  
 def metar_df(interesting_variables,data_m):
@@ -12,7 +12,7 @@ def metar_df(interesting_variables,data_m):
     for datapoint in data_m["metar"]:
        for parts in datapoint:
             partsList = parts.split()
-            #print(partsList)
+            
             row_data = {}
            
             if len(parts)> 1 and "Airport" in interesting_variables:
@@ -21,8 +21,6 @@ def metar_df(interesting_variables,data_m):
             if len(parts)> 2 and "Date/time" in interesting_variables:
                 row_data["Date/time"] = partsList[1]
  
-            #if len(parts)> 3 and "Wind/direction" in interesting_variables:
-                #row_data["Wind/direction"] = partsList[2]
 
             if len(parts)> 3 and "Wind_direction" in interesting_variables:
                 wind_dir_str = partsList[2][:3]
@@ -91,13 +89,28 @@ def metar_df(interesting_variables,data_m):
                         break
                     else: row_data["Cloud 5"] =np.nan
                
-            if "Temp/dewpoint" in interesting_variables:
+            if "Temperature" in interesting_variables or "Dewpoint" in interesting_variables:
+                temp_dewpoint_value = np.nan  
+                temp_dewpoint_pattern = re.compile(r'^(M?\d{1,2})/(M?\d{1,2})$')
+
                 for part in partsList:
-                    if "/" in part and len(part)> 3:
-                        row_data["Temp/dewpoint"] = part
+                    if temp_dewpoint_pattern.match(part):
+                        temp_dewpoint_value = part
                         break
-                    else: row_data["Temp/dewpoint"] = np.nan
-           
+
+                if isinstance(temp_dewpoint_value, str):
+                    temp_str, dew_str = temp_dewpoint_value.split('/')
+
+                    if "Temperature" in interesting_variables:
+                        row_data["Temperature"] = int(temp_str.replace('M', '-'))
+                    if "Dewpoint" in interesting_variables:
+                        row_data["Dewpoint"] = int(dew_str.replace('M', '-'))
+                else:
+                    if "Temperature" in interesting_variables:
+                        row_data["Temperature"] = np.nan
+                    if "Dewpoint" in interesting_variables:
+                        row_data["Dewpoint"] = np.nan
+
             if "QNH" in interesting_variables:
                 for part in partsList:
                     if "Q" in part and len(part)> 3:

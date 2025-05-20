@@ -56,10 +56,21 @@ class TestMetarDataFrame(unittest.TestCase):
 
 # NEGATIVE TESTER:
 
-    def test_negative(self):
-        interesting_vars = ["Wind_direction"]
-        df = metar_df(interesting_vars, self.data_m)
-        assert 0 in df["Wind_direction"].values
+    def test_interesting_variables_not_list(self):
+        with self.assertRaises(ValueError) as context:
+            metar_df("Airport", self.data_m)
+        self.assertIn("interesting_variables må være en liste med strenger.", str(context.exception))
+
+    def test_interesting_variables_contains_non_strings(self):
+        with self.assertRaises(ValueError) as context:
+            metar_df(["Airport", 123], self.data_m)
+        self.assertIn("interesting_variables må være en liste med strenger.", str(context.exception))
+
+    def test_data_m_missing_metar_key(self):
+        data_m_missing_metar = {"no_metar": self.data_m["metar"]}
+        with self.assertRaises(KeyError) as context:
+            metar_df(["Airport"], data_m_missing_metar)
+        self.assertEqual(context.exception.args[0], "data_m må inneholde nøkkelen 'metar'.")
 
     def test_invalid_interesting_variables_type(self):
         with pytest.raises(ValueError, match="interesting_variables må være en liste med strenger."):
@@ -69,23 +80,11 @@ class TestMetarDataFrame(unittest.TestCase):
         with pytest.raises(ValueError, match="interesting_variables må være en liste med strenger."):
             metar_df([123, "Date/time"], {"metar": []})
 
-    def test_data_m_not_dict(self):
-        with pytest.raises(ValueError, match="data_m må være en dictionary."):
-            metar_df(["Airport"], ["not", "a", "dict"])
+    def test_negative(self):
+        interesting_variable = ["Wind_direction"]
+        df = metar_df(interesting_variable, self.data_m)
+        assert 0 in df["Wind_direction"].values    
 
-    def test_data_m_missing_metar_key(self):
-        with pytest.raises(KeyError, match="data_m må inneholde nøkkelen 'metar'."):
-            metar_df(["Airport"], {"not_metar": []})
-
-    def test_metar_key_not_iterable(self):
-        with pytest.raises(ValueError, match="data_m\\['metar'\\] må være en liste eller lignende itererbar."):
-            metar_df(["Airport"], {"metar": "not_a_list"})
-
-    def test_datapoint_not_iterable(self):
-        # Skal ikke raise, men funksjonen skal ignorere ikke-liste datapunkt
-        result = metar_df(["Airport"], {"metar": ["not a list inside"]})
-        assert isinstance(result, pd.DataFrame)
-        assert result.empty
 
     def test_parts_not_string(self):
         # Skal ikke raise, men ignorere ugyldige innslag

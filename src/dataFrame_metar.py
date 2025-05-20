@@ -11,29 +11,24 @@ def metar_df(interesting_variables,data_m):
     if not isinstance(interesting_variables, list) or not all(isinstance(var, str) for var in interesting_variables):
         raise ValueError("interesting_variables må være en liste med strenger.")
     
-    if not isinstance(data_m, dict):
-        raise ValueError("data_m må være en dictionary.")
+    #if not isinstance(data_m, dict):
+        #raise ValueError("data_m må være en dictionary.")
     
     if "metar" not in data_m:
         raise KeyError("data_m må inneholde nøkkelen 'metar'.")
     
-    if not isinstance(data_m["metar"], (list, tuple)):
-        raise ValueError("data_m['metar'] må være en liste eller lignende itererbar.")
+    #if not isinstance(data_m["metar"], (list, tuple)) or not all(isinstance(entry, str) for entry in data_m["metar"]):
+        #raise ValueError("data_m['metar'] må være en liste med strenger.")
+
 
     df = pd.DataFrame(columns= interesting_variables)
    
     for datapoint in data_m["metar"]:
-        if not isinstance(datapoint, list):
-            continue  # hopper over ugyldige datapunkter
-
-        for parts in datapoint:
-            if not isinstance(parts, str):
-                continue  # hopper over ugyldige tekstblokker
-
-        try:
+       for parts in datapoint:
             partsList = parts.split()
+            
             row_data = {}
-           
+         
             if len(parts)> 1 and "Airport" in interesting_variables:
                 row_data["Airport"] = partsList[0]
  
@@ -141,8 +136,8 @@ def metar_df(interesting_variables,data_m):
             row_df = pd.DataFrame([row_data])
             df = pd.concat([df, row_df], ignore_index=True)
         
-        except Exception as e:
-            print(f"Feil ved parsing av datapunkt: {parts}\nFeilmelding: {e}")
-            continue
+        #except Exception as e:
+            #print(f"Feil ved parsing av datapunkt: {parts}\nFeilmelding: {e}")
+            #continue
 
     return df

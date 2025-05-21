@@ -1,0 +1,22 @@
+## Refleksjonsnotat
+Prosjektet i miljødataanalyse har vært krevende, tidvis overveldende, men samtidig gøy og ekstremt lærerikt. Det har vært avgjørende for oss å forstå hver oppgave godt, slik at vi kunne strukturere arbeidet og analysere på en oversiktlig og systematisk måte.
+### Datainnsamling
+Vi lærte tidlig at datainnsamling kan gjøres med API, er og flere av de krever identifisering og nøkler. Dette er noe vi lærte på den harde måten, med å bli utestengt av nettsiden for å etterspørre for mye data på engang uten identifisering. Dette har vi løst med gode programmeringsrutiner for identifisering og å ved å legge inn inkrements slik at vi ikke overbelaster API’en.
+### Databehandling
+For å få god oversikt over datasettet, tok vi bruk flere biblioteker som Pandas, msno og andre biblioteker og andre teknikker for å få en god forståelse av dataen. Å fylle tomme linjer med NA, er også hensiktsmessig slik at dataen ikke blir tolket som verdien 0.
+### Datanalyse og visualisering
+Når det kommer til dataanalyse har det vært viktig for oss å ha et utgangspunkt vi ønsker å undersøke, dette har gjort det enklere for oss å tolke resultatene våre, og for å kunne visualisere data som er verd å visualisere. Dette har vi løst ved å fremstille visualiseringene våre opp mot ulike variablers korrelasjon. Det har vært nyttig for beslutninger som blir tatt for videre prediktiv analyse. Vi har også skapt gode visualiseringer som vindrose, som viser vindstyrke fra ulike vindretninger på en flyplass.
+### Programmeringsferdigheter
+Vi har tilegnet oss nye ferdigheter, blant annet effektiv bruk av list comprehensions for å hente og strukturere data i Pandas DataFrames. Dette har gjort videre analyse effektivt og skalerbar. Vi har også blitt tryggere på å bruke versjonskonrollsystemet Git. Når vi begynte prosjektet brukte vi ganske mye tid til å få satt opp repository og få venv til å fungere. Etter hvert som vi har blitt bedre til å programmere har vi blitt bedre til å følge standardiserte metoder som PEP-8, og standardiserte commit messages som gjør at det er mer oversiktlig å jobbe sammen.
+### Utfordringer
+Vi anerkjenner at datasettet vårt heller burde vært færre punkter per dag, og over flere år for å få et godt resultat til problemstillingen vår. Vi har også vært veldig ambisiøse med å finne resultater som kan anvendes i ingeniørtekniske metoder som optimalisering av flyplass-layout og i dette prosjektet optimal retning på rullebanen.
+### Samarbeid og arbeidsflyt
+Samarbeidet i gruppen har vært god, vi har kun vært 2 personer og dette har medført at vi har vært helt avhengige av god kommunikasjon og forståelse. Det har krevd at begge har vært delaktige gjennom hele prosjektet og vi synes at vi har løst det på en god måte sammen. Vi har også for det meste jobbet sammen når vi har jobbet med prosjektet, og jobbet jevnt med prosjektet gjennom hele perioden. De gangene vi har jobbet hver for oss har vi enten avtalt på forhånd hvem som jobber med hva, eller branchet ut, for at kodene ikke skal kollidere.
+### Vurdering av resultat og forbedringer
+Igjen mener vi at resultatene hadde vært mer presise dersom vi hadde hatt flere år med data. Visualiseringene våre derimot er gode og fremstiller resultatene våre godt. Med den dataen vi har benyttet har vi fått resultater vi mener er forståelige og velbegrunnet. Kunnskapsnivået er nå høyere enn før og vi vet bedre hva som krever mer enn andre ting.
+### Videre utvikling og forskning
+Det hadde vært spennende å jobbe videre med prosjektet for å finne andre optimale løsninger i forbindelse med lufttrafikk og flyplassdrift. I dette prosjektet har vi bare sett på optimal retning basert på historisk værdata, men for å finne optimale løsninger bør vi se på flere parametere og krav for å tilfredsstille en optimal løsning.
+### Læringsutbytte og personlig refleksjon
+For vår del har forståelsen for hvordan et programmeringsprosjekt med repo og flere involverte hvert et av de største læringsutbyttet. Å forstå kompleksiteten i værdata og miljøstudier tror jeg vi aldri kommer helt til å forstå, men vi vet for sikkert at det er enklere å få oversikt av miljødataen ved bruk av python og ulike biblioteker.
+Vi har lært mye om å jobbe med et større prosjekt som virker overveldende i starten, men som blir mer og mer overkommelig når vi løser et problem av gangen. Dette prosjektet tror vi at er en god erfaring å ha med seg til bacheloroppgaven. Vi tror også at dette prosjektet er nyttig kunnskap å ta med seg til yrkeslivet.
+

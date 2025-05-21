@@ -26,13 +26,6 @@ Funksjonalitet:
 - formålet - lage en pandas.DataFrame
 - denne funksjonen brukes [her](../notebooks/03_databehandling.ipynb)
 
-
-## [Metar_reader](metar_reader.py)
-Funksjonalitet:
-
-- leser MEATR-data og gjør videre analyse av data mulig.
-
-
 ## [Metar_writer](metar_writer.py) 
 
 Funksjonalitet:

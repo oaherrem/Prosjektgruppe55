@@ -19,20 +19,20 @@ Innehold:
 - alle delene av prosjektet fordelt i funksjonelle .ipynb filer.
 - gjennomgående forklaringer og resultater av analysen om miljødata
 
-[notebooks/README.md](/notebooks/README.md)
+- Les mer her: [notebooks/README.md](/notebooks/README.md)
 
 ## resources
  Innehold: 
  - Her ligger bilder/ e.l som vi har brukt i prosjektet. 
 
-[resources](/resources/README.md)
+ - Les mer her:[resources/README.md](/resources/README.md)
 
 ## src
 Innhold:
 - større koder som benyttes i notebook filene
 - alle funksjoner er laget i .py filer
 
-[src/README.md](/src/README.md)
+- Les mer her: [src/README.md](/src/README.md)
 
 ## .env
 Innhold:
@@ -40,7 +40,7 @@ Innhold:
 - . env er lagringsplass av linker og koder.
 - URL til API.met
 
-[.env](/.env)
+- [.env](/.env)
 
 
 ## .requirements.txt
@@ -49,13 +49,13 @@ Innhold:
 - Lister opp hvilke Python-pakker som prosjektet trenger for å kjøre.
 - brukes for å laste ned venv
 
-[.requirements.txt](/requirements.txt)
+- [.requirements.txt](/requirements.txt)
 
 ## .gitignore
 Innhold: 
 - Ignorerer spesifikke mapper ved committ til git hub. 
 
-[.gitignore](/.gitignore)
+- [.gitignore](/.gitignore)
 
 
 # Utgangspunktet for oppgave

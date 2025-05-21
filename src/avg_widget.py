@@ -8,7 +8,7 @@ from IPython.display import clear_output
 airport = 'ENOL'
 #airport = 'ENBO'
 
-file_path = f'../data/csv/{airport}_wind_data.csv'
+file_path = f'../data/csv/{airport}_data.csv'
 df_airport = pd.read_csv(file_path)
 
 def avg_widget(ses=2.5):

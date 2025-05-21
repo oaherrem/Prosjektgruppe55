@@ -25,7 +25,7 @@ Resultatet vi får etter databehanldingen blir lagret som en dataframe i [csv ma
 
 ## DEL 2 Dataanalyse og visualisering 
 I denne delen bruker vi den rensede dataframen som ble lagret i en csv-fil fra del 1, i visualiseringer og videre analyse/prediksjon.
-- Renset [dataframe](../data/csv/ENOL_wind_data.csv) i csv-fil
+- Renset [dataframe](../data/csv/ENOL_data.csv) i csv-fil
 
 ### Oppgave 4: [Dataanalyse](./04_dataanalyse.ipynb)
 - Bergener statistiske mål som gjennomsnitt, median og standardavvik, hvor vi bruker Numpy og Pandas biblioteker.

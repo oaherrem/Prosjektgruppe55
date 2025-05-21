@@ -1,50 +1,59 @@
 # Mappeinndeling og innhold av besvarelse
 
-## Data
-Mappe for lagring av innsamlet data. Inneholder to undermapper, en for csv filer og en for json filer. 
+## data
+Mappe for lagring av innsamlet data. 
+Inneholder to undermapper:
+- en for [csv-filer](/data/csv)
+- en for [json-filer](/data/json)
 
-[Data](/proj_environment-main/data/README.md)
+[data/README.md](/data/README.md)
 
-## Docs
-Innholder dokumentasjon og utfyllende besvarelser. 
-- Oppgavebeskrivelsene av del 1 + 2 samt generell del
-- Utfyllende svar på oppgavene og vurderingskriteriene 
+## docs
+Innholder tre undermapper:
+- [besvarelse](/docs/besvarelse): refleksjonsnotatet - oppgave 7 som en .md fil
+- [deklarasjon og kilder](/docs/deklarasjon_&_kilder): KI-deklarasjon som .pdf og kildeliste med brukte kilder i prosjektet.
+- [tasks](/docs/tasks): oppgavene og vurderingskriteriene til prosjektet. Del 1, del 2 og generell del.
 
-[Docs\tasks](/proj_environment-main/docs/tasks/del_1.md)
+## notebooks
+Innehold:
+- alle delene av prosjektet fordelt i funksjonelle .ipynb filer.
+- gjennomgående forklaringer og resultater av analysen om miljødata
 
-## Notebooks
+[notebooks/README.md](/notebooks/README.md)
 
-Her ligger kodene for hver oppgave. Vi importerer lagrede data filer i tillegg til våre hovedfunksjoner. 
-
-[Notebooks](/proj_environment-main/notebooks/README.md)
-## Resources
- 
+## resources
+ Innehold: 
  - Her ligger bilder/ e.l som vi har brukt i prosjektet. 
 
-[Resources](/proj_environment-main/resources/README.md)
+[resources](/resources/README.md)
 
-## Src
+## src
+Innhold:
+- større koder som benyttes i notebook filene
+- alle funksjoner er laget i .py filer
 
-I denne mappen ligger koder som kan benyttes flere ganger. Dette gjør kodene mer brukervennlige å hente opp flere ganger uten å måtte kopiere koden direkte inn i hver fil. 
-
-[Src](/proj_environment-main/src/README.md)
+[src/README.md](/src/README.md)
 
 ## .env
-. env er lagringsplass av linker, API-nøkler og koder.
+Innhold:
 
-[.env](/proj_environment-main/.env)
+- . env er lagringsplass av linker og koder.
+- URL til API.met
 
-
+[.env](/.env)
 
 
 ## .requirements.txt
+Innhold: 
 
-Lister opp hvilke Python-pakker som prosjektet trenger for å kjøre.
+- Lister opp hvilke Python-pakker som prosjektet trenger for å kjøre.
+- brukes for å laste ned venv
+
 [.requirements.txt](/requirements.txt)
 
 ## .gitignore
-
-Ignorerer deler i forbindelse emg git hub. 
+Innhold: 
+- Ignorerer spesifikke mapper ved committ til git hub. 
 
 [.gitignore](/.gitignore)
 

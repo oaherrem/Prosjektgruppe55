@@ -7,7 +7,7 @@ Json filene innholder rådata fra API met, med metar data fra et år. I oppgave 
 
 
 ## csv
-Dataen i disse filene er renset data fra json filene. Dataen i csv filene blir lagret gjennom mappen som heter[databehandling](../notebooks/03_databehandling.ipynb). Vi har laget en funskjon [dataframe_metar](../src/dataFrame_metar.py) som iterer over alle datapunktene i datasettet og deretter lagrer det som en dataframe. Dataframen består av utvalgte variabler vi benytter videre i analysen vår. 
+Dataen i disse filene er renset data fra json filene. Dataen i csv filene blir lagret gjennom mappen som heter ['databehandling'](../notebooks/03_databehandling.ipynb). Vi har laget en funskjon [dataframe_metar](../src/dataFrame_metar.py) som iterer over alle datapunktene i datasettet og deretter lagrer det som en dataframe. Dataframen består av utvalgte variabler vi benytter videre i analysen vår. 
 
 ## Generell info om innsamlet data:
 

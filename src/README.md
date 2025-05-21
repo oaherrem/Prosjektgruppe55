@@ -3,35 +3,40 @@
 
 I mappen src ligger koder som kan benyttes flere ganger for besvarelse for oppgavene.
 
-## __Init__.py
+## [__init__.py](__init__.py)
 
-[Link til: __init__.py](__init__.py)
+Funksjonalitet
+- gjør det mulig å finne/importere pyhon koder i 'src' mappe, i andre overordnede mapper, ved å gjøre om mappa til en python-pakke
 
-Formålet med denne filen er at den gjør en mappe til en Python-pakke, som gjør det mulig å finne andre pyton koder i denne mappen.
+## [avg_widget.py](avg_widget.py)
 
-## DataFrame_metar
+Funksjonalitet: 
+- denne funksjonen brukes [her](../notebooks/05_visualisering.ipynb)
 
-[dataFrame_metar.py](dataFrame_metar.py)
+## [crosswind.py](crosswind.py)
+Funksjonalitet:
+- finner antall tilfeller av sidevind, basert på historiske datapunkter
 
-Plasserer informasjon i riktig kolonne ved bruk av ulike list comprehensions. Den bruker også en for loop med flere if setninger for å kunne hente riktig data til riktig kolonne. Dette gjør oppgave 3 mulig slik at vi får informasjonen i en data frame.
+- denne funksjonen brukes [her](../notebooks/04_dataanalyse.ipynb)
 
-## DataFrame_wind
-
-[dataFrame_wind.py](dataFrame_wind.py)
-
-Henter ut ... For å korte ned på DataFrame_ metar, som inneholder informasjon vi ikke skal fokusere på i analysen vår. 
-
-## Metar_reader
-[Metar_reader](metar_reader.py)
-
-Leser METAR-data og gjør videre analyse av data mulig.
+## [dataFrame_metar.py](dataFrame_metar.py)
+Funksjonalitet:
+- plasserer og sorterer kategorisk data ved bruk av list comprehensions
+- for-loop med flere if-setninger for å plassere rett type data i rett kolonne
+- formålet - lage en pandas.DataFrame
+- denne funksjonen brukes [her](../notebooks/03_databehandling.ipynb)
 
 
-## metar_writer
- [Metar_writer](metar_writer.py) 
- 
+## [Metar_reader](metar_reader.py)
+Funksjonalitet:
 
-Skriver METAR-data basert på gitte perimetre gitt av brukeren. Her har vi også identifisert oss på bakgrunn av krav fra Metrologisk Institutt. 
+- leser MEATR-data og gjør videre analyse av data mulig.
 
-Importer også URL gjennom [.env](../.env)
+
+## [Metar_writer](metar_writer.py) 
+
+Funksjonalitet:
+- skriver METAR-data basert på parameter gitt av bruker
+- identifiserer bruker til eier av API, grunnet krav fra eier, i dette tilfelle Meterologisk Institutt
+- importer også URL gjennom [.env](../.env)
  

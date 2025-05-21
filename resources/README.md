@@ -3,13 +3,10 @@ Innholder bilder som er benyttet i dette prosjektet.
 
 ## Images 
 
-Bilde av Ørland: 
-[Link kartet ENOL bakgrunn](./images/ENOL_kart.png)
+Bilde av kart - Ørland: 
+- kartet av ENOL som bakgrunn - [Link](./images/ENOL_kart.png)
+- Dette bildet er brukt [her](../notebooks/05_visualisering.ipynb) 
 
-[Link til hvor det er brukt](../notebooks/Oppgave_5.ipynb)
-
-
-Bilde i forbindelse med generell del prosjektoppgavebeskrivelse. 
-[Link til bilde prosjekt](./images/project.png)
-
-[Link til hvor det er benyttet](../docs/tasks/mappe_generell_del.md)
+Bilde i forbindelse med generell del prosjektoppgavebeskrivelse: 
+- bilde av prosjektet - [Link](./images/project.png)
+- Dette bildet er brukt [Her](../docs/tasks/mappe_generell_del.md)

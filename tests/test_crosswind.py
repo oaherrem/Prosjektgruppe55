@@ -2,6 +2,7 @@
 import unittest
 import sys
 import os
+import pytest
 
 # Adjust the path to the src directory
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
@@ -40,6 +41,7 @@ class TestCrosswindFunction(unittest.TestCase):
 
     def test_symmetry_case(self):
         self.assertTrue(is_crosswind(180, 90, 50))  # ren sidevind fra øst
+
 
 if __name__ == "__main__":
     unittest.main()

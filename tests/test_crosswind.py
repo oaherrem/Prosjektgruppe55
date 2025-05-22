@@ -4,7 +4,7 @@ import sys
 import os
 import pytest
 
-# Adjust the path to the src directory
+#Justerer filbanen til 'src'-mappa
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
 
 from crosswind import is_crosswind

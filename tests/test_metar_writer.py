@@ -5,7 +5,7 @@ import pytest
 import requests
 from unittest.mock import patch, Mock
 
-# henter filbanen  til 'src'- mappa
+#Justerer filbanen til 'src'-mappa
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
 
 from metar_writer import get_metar

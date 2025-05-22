@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 import pytest 
 
-# Adjust the path to the src directory
+#Justerer filbanen til 'src'-mappa
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
 
 from dataFrame_metar import metar_df
@@ -66,7 +66,7 @@ class TestMetarDataFrame(unittest.TestCase):
             metar_df(["Airport", 123], self.data_m)
         self.assertIn("interesting_variables må være en liste med strenger.", str(context.exception))
 
-    def test_data_m_missing_metar_key(self):
+    def test_missing_metar_key(self):
         data_m_missing_metar = {"no_metar": self.data_m["metar"]}
         with self.assertRaises(KeyError) as context:
             metar_df(["Airport"], data_m_missing_metar)

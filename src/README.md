@@ -12,6 +12,8 @@ Funksjonalitet
 
 Funksjonalitet: 
 - denne funksjonen brukes [her](../notebooks/05_visualisering.ipynb)
+- gjør det mulig å endre glattingskonstanten for KDE
+- dokumentasjon finner du [her](https://ipywidgets.readthedocs.io/en/stable/)
 
 ## [crosswind.py](crosswind.py)
 Funksjonalitet:

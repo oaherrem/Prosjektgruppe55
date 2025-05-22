@@ -9,20 +9,20 @@ Inneholder to undermapper:
 [data/README.md](/data/README.md)
 
 ## docs
-Innholder tre undermapper:
+Inneholder tre undermapper:
 - [besvarelse](/docs/besvarelse): refleksjonsnotatet - oppgave 7 som en .md fil
 - [deklarasjon og kilder](/docs/deklarasjon_&_kilder): KI-deklarasjon som .pdf og kildeliste med brukte kilder i prosjektet.
 - [tasks](/docs/tasks): oppgavene og vurderingskriteriene til prosjektet. Del 1, del 2 og generell del.
 
 ## notebooks
-Innehold:
+Innhold:
 - alle delene av prosjektet fordelt i funksjonelle .ipynb filer.
 - gjennomgående forklaringer og resultater av analysen om miljødata
 
 - Les mer her: [notebooks/README.md](/notebooks/README.md)
 
 ## resources
- Innehold: 
+ Innhold: 
  - Her ligger bilder/ e.l som vi har brukt i prosjektet. 
 
  - Les mer her:[resources/README.md](/resources/README.md)
@@ -58,12 +58,23 @@ Innhold:
 - [.gitignore](/.gitignore)
 
 
+
 # Utgangspunktet for oppgave
 
-Forklaring**
+Fly ønsker å ta av i motvind og lande i motvind. Det er tryggere, mer drivstoffbesparende og sliter mindre på bremser og dekk. Ergo tryggere, lavere kostnader og mer miljøvennlig.
+
+I dette prosjektet ønsker vi å finne ut hva som er optimal retning på flystripen, basert på historisk data for vindretning? Både for Ørlandet hvor de har gjort oppgraderinger uten å flytte retningen på rullebanen og i Bodø hvor det er vedtatt at den skal flyttes.
+
+Man ønsker også å forhindre sidevind, dersom sidevinden er for sterk kan fly bli nektet adgang og landing.
+
+Hvorfor motvind er bra for landing og avgang kan du lese her:  
+https://skybrary.aero/articles/headwind
+https://simpleflying.com/why-aircraft-take-off-land-into-wind/
+
 ## Bodø flyplass
-Ny flystripe for Bodø Lufthavn
-https://www.nrk.no/nordland/forste-spadetak-pa-bodo-lufthavn-og-prosjektet-ny-by-ny-flyplass-1.16344890
+Ny flystripe for Bodø Lufthavn, hva er optimal retning? 
+
+les mer her: https://www.nrk.no/nordland/forste-spadetak-pa-bodo-lufthavn-og-prosjektet-ny-by-ny-flyplass-1.16344890
 
 ## Ørland flyplass 
 Vi ønsket å undersøke om flystripen på Ørland er optimal, da de nettopp har holdt hoverullebanen stengt grunnet arbeid og renovering i over 1 år? 
@@ -76,15 +87,3 @@ https://www.forsvarsbygg.no/no/nyheter/ny-hovedrullebane-pa-orland-flystasjon-er
 ENBO: RWY 07/25 /// 70 og 250 grader
 
 ENOL: RWY 15/33 /// 150 og 330 grader
-
-
-## Prosjektets premisser
-
-Fly ønsker å ta av i motvind og lande i motvind. Det er tryggere, mer drivstoffbesparende og sliter mindre på bremser og dekk. Ergo tryggere, lavere kostnader og mer miljøvennlig.
-
-I dette prosjektet ønsker vi å finne ut hva som er optimal retning på flystripen, basert på historisk data for vindretning? Både for Ørlandet hvor de har gjort oppgraderinger uten å flytte retningen på rullebanen og i Bodø hvor det er vedtatt at den skal flyttes.
-
-
-Hvorfor motvind er bra for landing og avgang kan du lese her:  
-https://skybrary.aero/articles/headwind
-https://simpleflying.com/why-aircraft-take-off-land-into-wind/
